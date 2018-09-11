@@ -1,0 +1,86 @@
+﻿Session 4 – Foundational R
+     Programming - II
+      Assignment - 3
+Contents
+
+  Introduction ..................................................................................................................................................... 2
+
+  Objective .......................................................................................................................................................... 2
+
+  Prerequisites .................................................................................................................................................... 2
+
+  Associated Data Files ....................................................................................................................................... 2
+
+  Problem Statement ......................................................................................................................................... 2
+
+  Expected Output .............................................................................................................................................. 2
+
+
+
+
+   Copyrights© 2017, AcadGild. All Rights Reserved                                                                                                                1
+   Introduction
+This assignment will help you to understand the key concepts learnt in this session.
+
+
+   Objective
+This assignment will test your skills on foundational R programming – Writing Function.
+
+
+   Prerequisites
+Not Applicable
+
+
+   Associated Data Files
+Not Applicable
+
+
+   Problem Statement
+1. States = rownames(US Arrests)
+
+Get states names with ‘w’.
+
+Answer:
+> install.packages("states")
+> installed.packages(states)
+
+# get states names with 'w'
+
+grep(pattern = "w", x = states, value = TRUE)
+
+ [1] "Delaware" "Hawaii" "Iowa" "New Hampshire"
+ [5] "New Jersey" "New Mexico" "New York"
+
+Get states names with ‘W’.
+
+# get states names with 'W'
+grep(pattern = "W", x = toupper(states), value = TRUE)
+## [1] "DELAWARE" "HAWAII" "IOWA" "NEW HAMPSHIRE"
+## [5] "NEW JERSEY" "NEW MEXICO" "NEW YORK" "WASHINGTON"
+## [9] "WEST VIRGINIA" "WISCONSIN" "WYOMING"
+# get states names with 'w' or 'W'
+
+grep(pattern = "[wW]", x = states, value = TRUE)
+## [1] "Delaware" "Hawaii" "Iowa" "New Hampshire"
+## [5] "New Jersey" "New Mexico" "New York" "Washington"
+## [9] "West Virginia" "Wisconsin" "Wyoming"
+
+2. Prepare a Histogram of the number of characters in each US state.
+
+> state_chars=nchar(states)
+> hist(nchar(states), main = "Histogram",border = "red",                               
+	xlab = "number of characters in US States names")
+
+
+
+  
+(HISTOGRAM IS ATTACHED SEPERATELY IN GITHUB ID)
+
+ Expected Output
+Not Applicable
+
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved                                         2
+
